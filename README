@@ -1,0 +1,84 @@
+# Sistema de Gerenciamento de Inventário
+
+## Descrição
+
+Este projeto visa desenvolver um sistema de banco de dados para gerenciar o inventário de produtos em um armazém. O sistema permite o registro, manutenção, consulta e atualização de informações sobre produtos, categorias e fornecedores. O objetivo é facilitar a gestão de entradas e saídas de produtos e assegurar a integridade das informações.
+
+## Comandos Utilizados
+
+- `CREATE DATABASE`
+- `CREATE TABLE`
+- `INSERT`
+- `SELECT`
+- `UPDATE`
+- `DELETE`
+
+## Passos para o Projeto
+
+1. **Criar o Banco de Dados**
+
+   Crie um banco de dados chamado `InventarioArmazem`.
+
+2. **Criar as Tabelas**
+
+   - **Tabela de Categorias**: Contém colunas para `CategoriaID` e `Nome`.
+   - **Tabela de Fornecedores**: Contém colunas para `FornecedorID`, `Nome`, `Contato` e `Endereco`.
+   - **Tabela de Produtos**: Contém colunas para `ProdutoID`, `Descricao`, `Preco`, `QuantidadeEmEstoque` e `CategoriaID`.
+
+3. **Inserir Dados**
+
+   Adicione pelo menos 5 produtos, 3 categorias e 3 fornecedores nas respectivas tabelas.
+
+4. **Consultar Dados**
+
+   - Liste todos os produtos disponíveis em estoque.
+   - Mostre todos os produtos que pertencem a uma categoria específica.
+   - Exiba informações sobre os fornecedores que fornecem produtos acima de um determinado preço.
+
+5. **Atualizar Dados**
+
+   - Atualize o preço de um produto específico.
+   - Modifique a descrição de uma categoria existente.
+   - Altere o endereço de um fornecedor específico.
+
+6. **Deletar Dados**
+
+   - Remova um produto do inventário.
+   - Exclua uma categoria, garantindo que os produtos associados sejam atualizados ou removidos conforme necessário.
+   - Apague um fornecedor, verificando se não há produtos ainda associados a ele.
+
+## Estrutura do Banco de Dados
+
+### Tabela Categorias
+
+- `CategoriaID` (INT, PRIMARY KEY, AUTO_INCREMENT)
+- `Nome` (VARCHAR(50), NOT NULL)
+
+### Tabela Fornecedores
+
+- `FornecedorID` (INT, PRIMARY KEY, AUTO_INCREMENT)
+- `Nome` (VARCHAR(100), NOT NULL)
+- `Contato` (VARCHAR(50))
+- `Endereco` (TEXT)
+
+### Tabela Produtos
+
+- `ProdutoID` (INT, PRIMARY KEY, AUTO_INCREMENT)
+- `Descricao` (TEXT, NOT NULL)
+- `Preco` (DECIMAL(10, 2), NOT NULL)
+- `QuantidadeEmEstoque` (INT, NOT NULL)
+- `CategoriaID` (INT, FOREIGN KEY REFERENCES Categorias(CategoriaID) ON DELETE SET NULL)
+
+## Requisitos Adicionais
+
+- Utilize comandos `JOIN` para consultas que envolvem múltiplas tabelas.
+- Garanta a integridade referencial entre as tabelas.
+
+## Objetivo Final
+
+Desenvolver um sistema básico de gerenciamento de inventário que pode ser expandido com funcionalidades adicionais, como controle de entradas e saídas, relatórios de estoque e integração com sistemas de vendas.
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
+
