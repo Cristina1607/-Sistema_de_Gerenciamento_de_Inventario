@@ -1,0 +1,61 @@
+# Arquivos de banco de dados
+*.db
+
+# Logs
+*.log
+
+# Sistema de arquivos
+.DS_Store
+
+# Arquivos de configuração de IDE
+.vscode/
+.idea/
+
+# Arquivos temporários
+*.tmp
+*.swp
+
+Projeto 8: Sistema de Gerenciamento de Inventário
+
+Descrição:
+
+Desenvolva um sistema para gerenciar o inventário de produtos em um armazém. Este sistema deve permitir o registro e a manutenção de informações sobre produtos, categorias e fornecedores. O objetivo é criar um banco de dados que facilite a gestão de entradas e saídas de produtos, bem como a consulta e atualização dessas informações.
+
+Comandos Utilizados:
+
+CREATE DATABASE
+CREATE TABLE
+INSERT
+SELECT
+UPDATE
+DELETE
+
+Passos:
+1. Criar o Banco de Dados:
+2. Crie um banco de dados chamado InventarioArmazem.
+
+Criar as Tabelas:
+1. Tabela de Produtos: Deve conter colunas para ProdutoID, Descricao, Preco, QuantidadeEmEstoque, e CategoriaID.
+2. Tabela de Categorias: Deve conter colunas para CategoriaID e Nome.
+3. Tabela de Fornecedores: Deve conter colunas para FornecedorID, Nome, Contato, e Endereco.
+
+Inserir Dados:
+Adicione pelo menos 5 produtos, 3 categorias e 3 fornecedores nas respectivas tabelas. Certifique-se de incluir valores variados para cada coluna.
+
+Consultar Dados:
+1. Liste todos os produtos disponíveis em estoque.
+2. Mostre todos os produtos que pertencem a uma categoria específica.
+3. Exiba informações sobre os fornecedores que fornecem produtos acima de um determinado preço.
+
+Atualizar Dados:
+1. Atualize o preço de um produto específico.
+2. Modifique a descrição de uma categoria existente.
+3. Altere o endereço de um fornecedor específico.
+
+Deletar Dados:
+1. Remova um produto do inventário.
+2. Exclua uma categoria, garantindo que os produtos associados sejam atualizados ou removidos conforme necessário.
+3. Apague um fornecedor, verificando se não há produtos ainda associados a ele.
+
+Objetivo Final:
+Ao concluir este projeto, você terá criado um sistema básico de gerenciamento de inventário que pode ser expandido com funcionalidades adicionais, como controle de entradas e saídas, relatórios de estoque, e integração com sistemas de vendas. Certifique-se de seguir as boas práticas de modelagem de dados e garantir a integridade referencial entre as tabelas.
